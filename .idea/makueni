@@ -1,0 +1,634 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ticketing System(MTS)</title>
+    <script type="text/javascript">
+		var base_url="https://helpdesk.makueni.go.ke/";		
+    </script>
+    <!-- meta info -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+   
+    
+        
+   
+    <link rel="apple-touch-icon" sizes="180x180" href="https://helpdesk.makueni.go.ke/images/icon-logo/apple-touch-icon.png?t=1636833464">
+	<link rel="icon" type="image/png" href="https://helpdesk.makueni.go.ke/images/icon-logo/logo.png?t=1636833464">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://helpdesk.makueni.go.ke/images/icon-logo/favicon-32x32.png?t=1636833464">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://helpdesk.makueni.go.ke/images/icon-logo/favicon-16x16.png?t=1636833464">
+	<link rel="manifest" href="https://helpdesk.makueni.go.ke/images/icon-logo/manifest.json">	
+	<meta name="theme-color" content="#8c8a6f">
+	<meta name="msapplication-navbutton-color" content="#8c8a6f">
+    
+
+		<meta property="og:image" content="https://helpdesk.makueni.go.ke/images/icon-logo/logo.png" />
+
+	
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/bootstrap/3.3.7/css/bootstrap.min.css?v=1636833022" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/font-awesome/4.7.0/css/font-awesome.min.css?v=1636833032" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/ionicons/2.0.1/css/ionicons.min.css?v=1636833034" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/select2/css/select2.min.css?v=1636833038" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/select2/css/select2-bootstrap.min.css?v=1636833038" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/theme/client/css/styles.css?v=1.0" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/theme/client/css/theme-responsive.css?v=1.0" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/theme/client/css/color.css?v=1651392634" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/theme/client/css/app-custom.css?v=1636833054" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/css/main-style.css?v=3.2.0" type="text/css" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/bootstrapValidation/css/bootstrapValidator.min.css?v=3.2.0" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/sliding-growl-notification/css/notify.css?v=3.2.0" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/datetimepicker/jquery.datetimepicker.css?v=3.2.0" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/perfect-scrollbar/css/perfect-scrollbar.min.css?v=3.2.0" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/selectize/css/selectize.bootstrap3.css?v=1636833038" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/selectize/css/selectize.default.css?v=1636833038" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/bootstrap-material/css/material-all-css.css?v=1636833024" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/bootstrap-dropdown/css/bootstrap-dropmenu.min.css?v=1636833024" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/tooltipster/css/tooltipster.bundle.min.css?v=1636833042" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/tooltipster/css/plugins/tooltipster/sideTip/themes/borderless.min.css?v=1636833042" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/colorpicker/css/bootstrap-colorpicker.min.css?v=1636833030" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/apsbd-chat/css/appsbd-chat.css?v=1652174510" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/css/animate.min.css?v=1636833016" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/css/fa-ani.min.css?v=1636833016" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/magnific/magnific-bootstrap.css?v=1636833036" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/sweetalert/sweetalert.css?v=1636833040" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/plugins/icon/style.css?v=1636833034" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/css/app-custom.css?v=1636833016" type="text/css" />
+		<link rel="stylesheet" href="https://helpdesk.makueni.go.ke/css/user-custom.css?v=1636833016" type="text/css" />
+	
+		<script src="//www.google.com/recaptcha/api.js?onload=recaptchaCall&render=explicit"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/jquery/3.3.1/jquery.min.js?v=1636833036"></script>
+		<script src="https://helpdesk.makueni.go.ke/common-script/js?v=1.5"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/bootstrap/3.3.7/js/bootstrap.min.js?v=1636833024"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/bootstrapValidation/js/bootstrapValidator.min.js?v=3.2.0"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/grid/js/jquery.ba-resize.min.js?v=1636833034"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/sliding-growl-notification/js/notify.min.js?v=3.2.0"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/datetimepicker/jquery.datetimepicker.js?v=3.2.0"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js?v=3.2.0"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/selectize/js/standalone/selectize.min.js?v=1636833040"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/switch-btn/js/bootstrap-checkbox.min.js?v=1636833040"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/bootstrap-material/js/material.js?v=1636833024"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/bootstrap-material/js/ripples.min.js?v=1636833026"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/bootstrap-material/js/marerial-init.js?v=1636833024"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/numbertotext.js?v=1636833018"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/tooltipster/js/tooltipster.bundle.min.js?v=1636833042"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/colorpicker/js/bootstrap-colorpicker.min.js?v=1636833030"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/jquery.maskedinput-1.6.min.js?v=1636833016"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/Masking.js?v=1636833018"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/nicescroll/jquery.nicescroll.min.js?v=1636833038"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/quicksearch/jquery.quicksearch.min.js?v=1636833038"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/slimScroll/jquery.slimscroll.min.js?v=1636833040"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/clipboard/clipboard.min.js?v=1636833030"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/clipboard/init.js?v=1636833030"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/select2/js/select2.js?v=1636833038"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/apsbd-chat/js/appsbd-chat.min.js?v=1636833022"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/base64.js?v=1636833016"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/main-script.min.js?v=3.2.0"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/magnific/magnific.min.js?v=1636833036"></script>
+		<script src="https://helpdesk.makueni.go.ke/plugins/sweetalert/sweetalert.min.js?v=1636833040"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/custom-app-script.min.js?v=1.5"></script>
+		<script src="https://helpdesk.makueni.go.ke/js/user-custom.js?v=1636833018"></script>
+	    <!-- IE 8 Fallback -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+</head>
+
+<body class="aps-ctrl-p site-theme body-loading site-theme-2 site-index  ">
+	<div class="page-loader">
+		<div style="margin-top:20%;font-size: 45px">
+		<i class="fa fa-circle-o faa-burst animated"></i> &nbsp;Loading..
+		</div>
+	</div>
+<div class="container-fluid app-content">	
+    <div class="app-client-2-header">
+    	<div class="app-header row ">
+    		<div class="col-md-12">
+       		<div class="row s-m-container">
+
+	<nav class="navbar navbar-default app-navbar app-navbar-2 animated">
+	  <div class="container-fluid ">
+		<div class="row">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	        <!-- Brand and toggle get grouped for better mobile display -->
+	    
+		
+        <style type="text/css">
+        	.site-theme-2 .app-navbar-2 .app-logo-container.app-logo-container-full .app-logo-img {
+    max-height: 100px !important;
+    height: auto !important;
+    min-height: 35px !important;
+}
+        </style>
+		<div class="col-md-4"> 
+		  <div class="row ">
+		  <div class=" app-logo-container  app-logo-container-full ">
+		      <a href="https://helpdesk.makueni.go.ke/">
+                              <img class="text-center app-logo-img  app-logo-img-full " alt="Logo"
+					src="https://helpdesk.makueni.go.ke/images/white-logo.png?t=1636834674">
+                                    <div class="app-title">
+                                        </div>
+		      </a>
+		 </div>  
+		 </div>
+		</div>
+		<div class="col-md-8">
+		 <div class="row ">
+		<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand visible-xs" href="https://helpdesk.makueni.go.ke/">Site Menu</a>
+	     	      <a class="popupformWR navbar-brand visible-xs pull-right" id="app-login-2" href="https://helpdesk.makueni.go.ke/user/login.html" data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i> Login</a>
+	     	     
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse p-0" id="bs-example-navbar-collapse-1">
+	       
+	      <ul class="nav navbar-nav navbar-right">
+	      <li class=" active "><a href="https://helpdesk.makueni.go.ke/"><i class="fa fa-home"></i> Home</a></li>
+                        <li class=""><a href="https://helpdesk.makueni.go.ke/knowledge.html"><i class="fa fa-graduation-cap"></i> Knowledge</a></li>
+	        	      <li>				<a data-effect="mfp-move-from-top" class="popupformWR  open-ticket"  href="https://helpdesk.makueni.go.ke/user/login-register.html" >
+					<i class="fa fa-ticket"></i> Open Ticket				</a>
+				</li>
+	      	        <li><a class="  popupformWR  " id="app-login"
+						href="https://helpdesk.makueni.go.ke/user/login.html"
+						data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i> Login</a></li>
+		      	        <li><a class="popupformWR" data-effect="mfp-move-from-top" href="https://helpdesk.makueni.go.ke/user/register.html"><i class="fa fa-wpforms"></i> Register</a></li>
+	        	        
+	      	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	    </div>
+		</div> <!-- end menu wrapper -->
+		
+		
+	    
+	    </div>
+	  </div><!-- /.container-fluid -->
+	</nav>
+</div>    		</div>
+    	</div>
+    	 <div class="container-fluid ">
+    	<div class="row app-header-bottom">
+    	  
+           
+        <div class="app-welcome-msg alert alert-success text-center" role="alert">
+  <h2 id="page-header-title" align="center">Welcome to Makueni County Government ICT HelpDesk &amp; Support System.<h3 id="page-header-tagline" align="center">An ICT Technical support application for Makueni County. We normally respond within 24 hours<br></h3></h2></div>
+<div class="row">
+<div class="text-center">
+<div class="col-md-12  src-main-container" style="position: relative;z-index: 999;">
+    <div class="form-group form-group-lg m-t-5" style="z-index: 99;">
+       <div class="input-group">	
+          <span class="input-group-addon"><i class="fa fa-search faa-tada"></i></span>		 
+    	  <input class="form-control auto-complete-off-processed src-input" name="item_search" id="app-src-input" placeholder="Search" autocomplete="off" type="search"> 
+    	   
+       </div>
+   </div>
+   
+   <div id="app-src-container" class="row src-container text-left" style="z-index: 90;">
+        <div class="" style="margin-top: -11px;position: absolute;left: 0;right: 0;top: 0;">
+            <div class="panel panel-default">             
+              <div class="panel-body" style="padding-top: 58px;">
+              	<div class="app-loader bar-black sm-loader m-t-15">
+                    <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div>
+                </div>
+                <div class=" app-src-list-content" >
+                
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(function(){
+	$("#app-src-input").focusin(function() {
+		$("#app-src-container").show();
+	});
+	$("#app-src-input").focusout(function() {
+		close_src_panel();
+	});
+	$("#app-src-input").keyup(function(e) {
+		 var va=$(this).val();
+		 //console.log(va);
+		 if(va.length>2){
+			var data={src:va};
+			showSrcLoader();
+			 search_delay(function(){
+				 $.ajax({
+				        url: appGlobalLang.src_url,
+				        data: set_csrf_param(data),
+				        type: "POST",
+				        scriptCharset: "utf-8",
+				        dataType: "json",
+				        beforeSend: function() {
+				        		        	 
+				        },
+				        success: function(rdata) {
+				        	app_set_src_list(rdata);
+				        },
+				        complete: function(jqXHR, textStatus) {
+				        	showSrcLoader(true);
+				        }
+				    });
+			   }, 600 );
+		 }else{
+			 //close_src_panel();
+		 }
+	});
+	$("body").on("click",function(e){
+		close_src_panel(true);
+	});
+	$(".src-main-container").on("click",function(e){
+		e.stopPropagation();
+	});
+});
+function showSrcLoader(is_hide){
+	if(typeof is_hide =="undefined"){
+		is_hide=false;
+	}
+	if(is_hide){		
+		$("#app-src-container .app-loader").hide();
+	}else{
+		$("#app-src-container .app-src-list-content").hide();
+		$("#app-src-container .app-loader").fadeIn();
+	}		
+}
+function close_src_panel(is_force){
+	if(typeof is_force =="undefined"){
+		is_force=false;
+	}
+	if(is_force || !$("#app-src-container").hasClass("app-srced")){		
+		$("#app-src-container").removeClass("app-srced").hide();
+		$("#app-src-container .app-loader").fadeOut();
+		
+	}
+}
+var search_delay = (function(){
+	  var timer = 0;
+	  return function(callback, ms){
+	    clearTimeout (timer);
+	    timer = setTimeout(callback, ms);
+	  };
+	})();
+function app_set_src_list(items){
+	//gcl(items.length);
+	if(items.total>0){
+		var htmltext=gen_app_src_ul(items);
+		$("#app-src-container .app-src-list-content").removeClass("text-center").html(htmltext);
+	}else{
+		$("#app-src-container .app-src-list-content").addClass("text-center").html("No search result found");
+	}
+	$("#app-src-container .app-src-list-content").show();
+}
+function gen_app_src_ul(items){
+	$("#app-src-container").addClass("app-srced");
+	if(items.total>0){
+    	var ulstr='<ul class="kn-list">';
+        for(var i=0; i<items.data.length;i++){         
+        	ulstr+='<li class=" p-5  ">\
+    		<div class="kn-title">\
+    			<h3 class="m-0">\
+    			<a href="'+items.data[i].href+'">'+items.data[i].title+'</a>\
+    			 <span class="cat-container" >in '+items.data[i].cat_link+'</span>\
+    				<span class="kn-like pull-right text-success"><i class="fa fa-thumbs-up "></i> '+items.data[i].l_count+'</span>\
+    		</h3>\
+    		</div>\
+    	</li>'; 
+        } 
+        if(items.total>items.data.length){
+            ulstr+='<li class=" p-5  text-center"><a href="'+items.full_url+'">Total Result ('+items.total+')</a></li>'; 
+        }	
+        ulstr+='</ul>';
+    	return ulstr;
+	}else{
+		return '';
+	}
+}
+</script>  
+        </div> 
+        </div>
+    </div>
+    <div class="row text-center need-support-panel">
+
+			<h2>Still Need Support?							<a data-effect="mfp-move-from-top" class="popupformWR btn btn-theme   open-ticket"  href="https://helpdesk.makueni.go.ke/user/login-register.html" >
+					<i class="fa fa-ticket"></i> Open Ticket				</a>
+				</h2>
+</div><div class="system-msg-list">
+    	        	    </div>
+   
+	<div class="app-content p-t-15">			
+		<div class="container-fluid ">
+		<div class="row">	
+			<div class="col-md-12">	
+				<div class="row">
+				
+				</div>
+			</div>
+		</div>
+		<div class="row">
+                            <div class="col-md-12 col-sm-12">
+                	<div class="row">
+                 <div class="row">
+<div class="col-md-4 art-box">
+<h3 class="art-box-title">
+	      Recent Articles	   </h3>
+	   <div class="art-box-content"> 
+	   				<ul class="art-kn-list">
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/26/blue-screen-of-death.html"><i class="fa fa-file-text-o"></i> Blue Screen of Death																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 582</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/25/noisy-hard-drive.html"><i class="fa fa-file-text-o"></i> Noisy hard drive																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 373</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/22/the-printer-is-offline.html"><i class="fa fa-file-text-o"></i> The Printer Is Offline																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 313</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/21/my-printer-doesn’t-print.html"><i class="fa fa-file-text-o"></i> My printer doesn’t print																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 252</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/20/how-do-i-lock-my-computer.html?"><i class="fa fa-file-text-o"></i> How Do I Lock My Computer?																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 289</span>
+															</a>
+						
+						
+						
+						</li>
+									</ul>
+				   </div>
+	</div>
+	<div class="col-md-4 art-box">
+	   <h3 class="art-box-title">
+	       Popular Articles	   </h3>
+	   <div class="art-box-content"> 
+	   				<ul class="art-kn-list">
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/26/blue-screen-of-death.html"><i class="fa fa-file-text-o"></i> Blue Screen of Death																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 582</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/3/my-computer-is-very-slow.html"><i class="fa fa-file-text-o"></i> My computer is very slow																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 435</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/5/how-do-i-know-if-an-email-is-spam.html?"><i class="fa fa-file-text-o"></i> How do I know if an email is spam?																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 408</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/11/why-is-my-computer-mouse-acting-erratically.html?"><i class="fa fa-file-text-o"></i> Why is my computer mouse acting erratically?																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 381</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/25/noisy-hard-drive.html"><i class="fa fa-file-text-o"></i> Noisy hard drive																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 373</span>
+															</a>
+						
+						
+						
+						</li>
+									</ul>
+				   </div>
+	</div>
+	<div class="col-md-4 art-box">
+	  <h3 class="art-box-title">
+	      Most Helpful Articles	   </h3>
+	   <div class="art-box-content"> 
+	   				<ul class="art-kn-list">
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/3/my-computer-is-very-slow.html"><i class="fa fa-file-text-o"></i> My computer is very slow																		<span class="view-counter pull-right"><i class="fa fa-thumbs-up"></i> 12</span>
+																</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/26/blue-screen-of-death.html"><i class="fa fa-file-text-o"></i> Blue Screen of Death																		<span class="view-counter pull-right"><i class="fa fa-thumbs-up"></i> 07</span>
+																</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/5/how-do-i-know-if-an-email-is-spam.html?"><i class="fa fa-file-text-o"></i> How do I know if an email is spam?																		<span class="view-counter pull-right"><i class="fa fa-thumbs-up"></i> 04</span>
+																</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/6/how-can-i-tell-if-i-have-a-virus.html?"><i class="fa fa-file-text-o"></i> How can I tell if I have a virus?																		<span class="view-counter pull-right"><i class="fa fa-thumbs-up"></i> 04</span>
+																</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/11/why-is-my-computer-mouse-acting-erratically.html?"><i class="fa fa-file-text-o"></i> Why is my computer mouse acting erratically?																		<span class="view-counter pull-right"><i class="fa fa-thumbs-up"></i> 03</span>
+																</a>
+						
+						
+						
+						</li>
+									</ul>
+				   </div>
+	</div>
+	
+</div><div class="row">
+        <div class="col-md-4 art-box">
+	  <h3 class="art-box-title">
+	       Computer Software	      
+	   </h3>
+	   <div class="art-box-content"> 
+	   				<ul class="art-kn-list">
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/5/how-do-i-know-if-an-email-is-spam.html?"><i class="fa fa-file-text-o"></i> How do I know if an email is spam?																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 408</span>
+															</a>
+						
+						
+						
+						</li>
+											<li class="">
+							
+							
+							<a class=" "   href="https://helpdesk.makueni.go.ke/knowledge/details/3/my-computer-is-very-slow.html"><i class="fa fa-file-text-o"></i> My computer is very slow																	<span class="view-counter pull-right"><i class="fa fa-eye"></i> 435</span>
+															</a>
+						
+						
+						
+						</li>
+									</ul>
+				   </div>
+	</div>
+		
+</div>                    </div>
+                </div>
+                            </div>
+			<div class="row">
+				<div class="col-md-12 text-left m-t-0 m-b-5"  style="font-size: 10px; font-style: italic;"> 
+** The time is base on Africa/Nairobi timezone</div>			</div>
+			</div>
+		 </div>
+		 
+		 <!-- footer -->
+		
+		 <div class="row">
+		  <footer class="">
+		   		  	<div class="main-footer">
+				 <div class="container-fluid ">
+				 	<div class="row main-footer-top">
+						<!-- Footer Area -->
+						<div class="col-md-12">
+							<div class="row">
+	<div class="col-md-12 text-center"><p>This is a ICT support system for Makueni County Government. We will try our best for you. Please feel free to contact us.</p></div>
+</div>
+							<div class="row"></div>
+						</div>
+			        </div>
+			     </div>
+		     </div>
+		     		     
+		     <div class="app-copywrite text-center">
+				 <div class="container-fluid ">
+				 	<div class="row main-footer-top">
+						<!-- Footer Area -->
+						<div class="col-md-12">
+						 <p>&copy; Copyright&nbsp; Makueni County Government</p>							
+							<div class="row"></div>
+													</div>
+			        </div>
+			     </div>
+		     </div>
+		    
+		    </footer> 	
+	     </div>
+	    <button class="go_top btn-theme animated hidden"><i class="fa fa-chevron-up"></i></button>
+	</div>
+	        <!-- Custom scripts -->
+	        <script src="https://helpdesk.makueni.go.ke/theme/client/js/theme-main.js"></script>
+			<script type="text/javascript">
+			var __previous_h=-1;
+				$(function(){
+					$('body').removeClass("body-loading");
+
+					$(window).on("scroll",function(e){
+						__set_stickey();
+					});
+					__set_stickey();
+					$(".go_top").on("click",function(e){
+						e.preventDefault();
+						 $("html, body").animate({ scrollTop: 0 }, 600);
+					});
+					
+				});	
+				function __set_stickey(){
+					__goTop();
+					return;
+									}	
+				function __goTop(){
+					var height=$(window).height();
+					var windowTop = $(window).scrollTop();						
+					if(windowTop>100){
+						$(".go_top").removeClass("hidden").removeClass("zoomOut").addClass("zoomIn");
+					}else{						
+						$(".go_top").removeClass("zoomIn").addClass("zoomOut");
+					}
+				}		
+			</script>
+
+        <script type="text/javascript" >
+        var chatbox=null;
+    $(function () {
+        chatbox=$.appsbdChat({
+            url:"https://helpdesk.makueni.go.ke/chat",
+            chatKey:"ct65b114ba499c9",
+            chatTitle:"Makueni  Support System(mSS)",
+            chatSubTitle:"Makueni  Support System(mSS)",
+            chatLogo:"https://helpdesk.makueni.go.ke/images/chatlogo.png?t=1706104004",
+            preMsg:"Welcome to our chat system.if you want to start chat with our agent then please click the button bellow.",
+            startBtnText:'Start Conversation',
+            audioPath:"https://helpdesk.makueni.go.ke/images/chatnoti.ogg",
+            userImg:"https://helpdesk.makueni.go.ke/images/no-image.png",
+            fileUrl:"https://helpdesk.makueni.go.ke/chat",
+            fileAccepts:".jpg,.png,.zip,.jpeg",
+            maxFileSize:5,
+            loadMoreText:"Load More",
+            buttonIcon:"ap ap-chat2",
+            onInit:function (plugin) {
+            }
+        });
+        //chatbox.Resize();
+    });
+    
+</script>	</body>
+
+</html>
+
+
+      
